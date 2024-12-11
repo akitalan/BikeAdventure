@@ -33,6 +33,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.favoriteplacesproject"
@@ -51,6 +55,11 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // 他の依存関係
 }
 
 flutter {
